@@ -1,4 +1,3 @@
-name: ddevconfigparenttest
 type: drupal11
 docroot: web
 php_version: "8.3"
@@ -13,6 +12,9 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: true
+hooks:
+    post-start:
+        - composer: require --dev drupal/svg_image_field:dev-2.3.x
 
 # Key features of DDEV's config.yaml:
 
